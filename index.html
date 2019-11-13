@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Inconsolata&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Calculator</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Corey's Calculator</h1>
+    <div id="calculator-body">
+      <div id="display">
+        <p id="result"></p>
+        <p id="operation"></p>
+      </div>
+      <div id="inputs">
+        <div class="numbers">
+          <button id="seven"class="box">7</button>
+          <button id="eight"class="box">8</button>
+          <button id="nine"class="box">9</button>     
+          <button id="four" class="box">4</button>
+          <button id="five"class="box">5</button>
+          <button id="six"class="box">6</button>
+          <button id="one" class="box">1</button>
+          <button id="two" class="box">2</button>
+          <button id="three" class="box">3</button>
+          <button id="zero" class="box">0</button>
+          <button id="decimal"class="box">.</button>
+          <button id="clear"class="box">Clear</button>
+        </div>
+        <div class="operators">
+          <button id="plus"class="box">+</button>
+          <button id="minus"class="box">-</button>
+          <button id="multiply"class="box">*</button>
+          <button id="divide"class="box">/</button>
+          <button id="equal"class="box">=</button>
+        </div>
+      </div>
+    </div>
+    <div class="error-msg">
+      <p id="error"></p>
+    </div>
+  </div>
+  <script src="calculator.js"></script>
+</body>
+</html>

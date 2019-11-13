@@ -1,0 +1,106 @@
+:root {
+  --number-color: #505050;
+  --operator-color: #ff9500;
+  --button-color: #888;
+  --bg: #1c1c1c;
+  --grid-gap: 2px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Inconsolata', monospace;
+  background: var(--bg);
+  color: white;
+  text-align: center;
+  height: 100vh;
+}
+body h1 {
+  margin-bottom: 2rem;
+}
+.container {
+  height: 100%;
+  min-height: 500px;
+  max-width: 800px;
+  padding: 0 3rem;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.box {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.4rem;
+  font-size: 2rem;
+  border: none;
+  color: white;
+  border-radius: 15px;
+  outline: none;
+  cursor: pointer;
+}
+#calculator-body {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  min-width: 250px;
+}
+#display {
+  height: 89.375px;
+  display: flex;
+  justify-content: space-between;
+}
+#display #result {
+  text-align: left;
+  font-size: 4rem;
+  padding: 0.7rem 0.5rem;
+}
+#display #operation {
+  text-align: right;
+  font-size: 2rem;
+  align-self: flex-end;
+  color: var(--operator-color);
+}
+#inputs {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: var(--grid-gap);
+}
+#inputs .numbers {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--grid-gap);
+}
+#inputs .numbers > * {
+  background: var(--number-color);
+}
+#inputs .numbers #clear {
+  grid-column: 1 / span 3;
+  background: var(--button-color);
+}
+#inputs .numbers #zero {
+  grid-column: 1 / span 2;
+}
+#inputs .operators {
+  display: grid;
+  gap: var(--grid-gap);
+}
+#inputs .operators > * {
+  background: var(--operator-color);
+}
+.error-msg {
+  width: 60%;
+  min-width: 250px;
+}
+/* .error-msg #error {
+  margin-top: 1rem;
+  padding: 0.35rem;
+  background: pink;
+  color: red;
+  border-radius: 15px;
+} */
